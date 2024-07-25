@@ -1,0 +1,53 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 200px 200px;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card0 {
+  grid-column: span 2;
+  /* height: 10%; */
+  background-color: aqua;
+}
+
+.card1 {
+  background-color: rgb(216, 131, 253);
+  border-radius: 40px;
+}
+
+.card2 {
+  background-color: rgb(116, 223, 245);
+  border-radius: 40px;
+}
+
+.card3 {
+  background-color: rgb(158, 245, 116);
+  /* grid-column: span 80%; */
+  border-radius: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* make divs and then align to left side or middle or wtvr */
+.image {
+}
+
+.card-title {
+}
+
+.card-notes {
+}
+
+.content > div {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
