@@ -1,26 +1,42 @@
 .navbar-container {
-  padding: 30px;
+  padding: 15px 30px; /* Reduce padding to make the navbar shorter */
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
-  /* position: fixed; Keeps the navbar at the top */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100%; Ensures the navbar spans the full width of the viewport */
-  background-color: #fff; /* Optional: Ensure the background color is set */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Ensure the background color is set */
   border-bottom: 2px solid #000; /* Adds a border at the bottom of the navbar */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  z-index: 1000; /* Ensure the navbar is above other content */
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  gap: 20px; /* Add a gap between the links */
+  gap: 20px; /* Space between links */
   align-items: center;
 }
 
-/* make logo closer to line and navbar shorter */
 .logo {
-  width: 5%; /* Adjust the width as needed */
+  width: 50px; /* Set a fixed width for the logo */
   height: auto; /* Maintain aspect ratio */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black; /* Default text color */
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+}
+
+.nav-link:visited {
+  color: black; /* Maintain text color after visit */
+}
+
+.nav-link:hover {
+  color: gray; /* Change color on hover */
 }

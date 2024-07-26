@@ -1,16 +1,18 @@
 import React from "react";
 import "../CSS/Home.css";
+import Navbar from "./Navbar";
+import Conveyer from "./Conveyer";
+import Projects from "./Projects";
 
 const Home = () => {
   return (
-    <div>
-      <div className="container">
+    <div className="all">
+      <Navbar />
+      <div id="home" className="container">
         <div className="card0">
           <div className="name">Yusuf Khan</div>
-
           <div className="header-blurb">
-            {/* Programming. Learning. Curiosity. Engagement. Development.{" "} */}
-            <button class="button-74" role="button">
+            <button className="button-74" role="button">
               See my Resume!
             </button>
           </div>
@@ -19,7 +21,7 @@ const Home = () => {
           <div className="content">
             <div>June 2023 - Present</div>
             <div className="card-title">
-              Data Anaytics and Self Service Intern @ WM
+              Data Analytics and Self Service Intern @ WM
             </div>
             <div className="card-notes">
               Optimized customer flows within WM.com to improve user experience
@@ -39,7 +41,7 @@ const Home = () => {
               <div>Future</div>
               <div className="card-title">Incoming API Intern @ HCSS</div>
               <div className="card-notes">
-                As an API intern at HCSS, a leading Civil/ Construction focused
+                As an API intern at HCSS, a leading Civil/Construction-focused
                 SaaS company offering APIs as a service, I look forward to
                 developing and maintaining APIs, creating detailed
                 documentation, and working closely with both business and
@@ -77,15 +79,10 @@ const Home = () => {
           </div>
         </div>
         <div className="card4">
-          <div className="small-card-3">
-            <div className="content-small">Resume</div>
-          </div>
-          <div className="small-card-3">
-            <div className="content-small">Linkedin</div>
-          </div>
-          <div className="small-card-3">
-            <div className="content-small">Github</div>
-          </div>
+          <Conveyer />
+        </div>
+        <div id="projects" className="projects">
+          <Projects />
         </div>
       </div>
     </div>
