@@ -3,6 +3,7 @@ import Conveyer from "./components/Conveyer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 // import Background from "./components/Background";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       {/* <Conveyer /> */}
       {/* <Projects /> */}
       {/* <Background /> */}
+      <Footer />
     </div>
   );
 }

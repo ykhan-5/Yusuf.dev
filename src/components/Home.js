@@ -12,9 +12,15 @@ const Home = () => {
         <div className="card0">
           <div className="name">Yusuf Khan</div>
           <div className="header-blurb">
-            <button className="button-74" role="button">
+            <a
+              href="https://docs.google.com/document/d/1mFoGk72WpMym6eh15dqFKb8SZxuC7CpYP2duvg1uvL4/edit?usp=sharing"
+              className="button-74"
+              role="button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               See my Resume!
-            </button>
+            </a>
           </div>
         </div>
         <div className="card1">
@@ -81,9 +87,9 @@ const Home = () => {
         <div className="card4">
           <Conveyer />
         </div>
-        <div id="projects" className="projects">
+        {/* <div id="projects" className="projects">
           <Projects />
-        </div>
+        </div> */}
       </div>
     </div>
   );
