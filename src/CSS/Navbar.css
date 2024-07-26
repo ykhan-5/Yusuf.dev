@@ -4,6 +4,12 @@
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+  /* position: fixed; Keeps the navbar at the top */
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 100%; Ensures the navbar spans the full width of the viewport */
+  background-color: #fff; /* Optional: Ensure the background color is set */
+  border-bottom: 2px solid #000; /* Adds a border at the bottom of the navbar */
 }
 
 .links {
@@ -11,4 +17,10 @@
   flex-direction: row;
   gap: 20px; /* Add a gap between the links */
   align-items: center;
+}
+
+/* make logo closer to line and navbar shorter */
+.logo {
+  width: 5%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
