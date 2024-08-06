@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/Yusuf.dev/static/css/main.b0a77c69.css",
-    "main.js": "/Yusuf.dev/static/js/main.6fc74fd5.js",
+    "main.css": "/Yusuf.dev/static/css/main.5480c8a3.css",
+    "main.js": "/Yusuf.dev/static/js/main.ba1f4ead.js",
     "static/media/star.mp4": "/Yusuf.dev/static/media/star.4769c9a87024403afedb.mp4",
     "static/media/Ion.png": "/Yusuf.dev/static/media/Ion.9d53ef42c5342f01f964.png",
     "static/media/Curly.png": "/Yusuf.dev/static/media/Curly.daf1dca1383ee4bc3d51.png",
     "static/media/DSA.png": "/Yusuf.dev/static/media/DSA.145bcb297a552b1422df.png",
     "static/media/math.png": "/Yusuf.dev/static/media/math.0b38b34648008222b0d8.png",
+    "static/media/plant.png": "/Yusuf.dev/static/media/plant.60fbbc006aa187a1a973.png",
+    "static/media/box.png": "/Yusuf.dev/static/media/box.b78ee5a1f6258551f43f.png",
     "static/media/computer.png": "/Yusuf.dev/static/media/computer.d66b03caea95b3de478c.png",
     "static/media/code.png": "/Yusuf.dev/static/media/code.a0e3ca8b51ab34dd21a5.png",
     "index.html": "/Yusuf.dev/index.html",
-    "main.b0a77c69.css.map": "/Yusuf.dev/static/css/main.b0a77c69.css.map",
-    "main.6fc74fd5.js.map": "/Yusuf.dev/static/js/main.6fc74fd5.js.map"
+    "main.5480c8a3.css.map": "/Yusuf.dev/static/css/main.5480c8a3.css.map",
+    "main.ba1f4ead.js.map": "/Yusuf.dev/static/js/main.ba1f4ead.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0a77c69.css",
-    "static/js/main.6fc74fd5.js"
+    "static/css/main.5480c8a3.css",
+    "static/js/main.ba1f4ead.js"
   ]
 }
