@@ -1,5 +1,6 @@
 .navbar-container {
-  padding: 15px 30px; /* Reduce padding to make the navbar shorter */
+  padding: 15px 30px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,35 +9,68 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Ensure the background color is set */
-  border-bottom: 2px solid #000; /* Adds a border at the bottom of the navbar */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-  z-index: 1000; /* Ensure the navbar is above other content */
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  gap: 20px; /* Space between links */
+  gap: 20px;
   align-items: center;
-}
-
-.logo {
-  width: 50px; /* Set a fixed width for the logo */
-  height: auto; /* Maintain aspect ratio */
 }
 
 .nav-link {
   text-decoration: none;
-  color: black; /* Default text color */
+  color: black;
   font-weight: bold;
-  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  white-space: nowrap;
 }
 
 .nav-link:visited {
-  color: black; /* Maintain text color after visit */
+  color: black;
 }
 
 .nav-link:hover {
-  color: gray; /* Change color on hover */
+  color: gray;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

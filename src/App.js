@@ -4,12 +4,18 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import star from "./assets/star.mp4";
+import About from "./components/About";
+import Current from "./components/Current";
 // import Background from "./components/Background";
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      {<Navbar />}
+      {<About />}
+      {<Current />}
+      {/* <Home /> */}
       {/* <Conveyer /> */}
       {/* <Projects /> */}
       {/* <Background /> */}

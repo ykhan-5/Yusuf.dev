@@ -1,0 +1,24 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  /* background-color: #f2f3f4; */
+}
+
+.about-text {
+  font-size: XXX-large;
+  line-height: 200%;
+}
+
+.icon {
+  height: 70px;
+  width: min-content;
+  display: inline-block;
+  vertical-align: middle;
+  padding-bottom: 10px;
+}
+
+.HCSS {
+  color: green;
+}
