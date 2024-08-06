@@ -2,7 +2,7 @@ import React from "react";
 import "../CSS/Home.css";
 import Navbar from "./Navbar";
 import Conveyer from "./Conveyer";
-import Projects from "./Projects";
+import Projects from "./Project";
 
 const Home = () => {
   return (

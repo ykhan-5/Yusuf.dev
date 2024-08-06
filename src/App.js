@@ -2,7 +2,7 @@ import "./App.css";
 import Conveyer from "./components/Conveyer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+import Projects from "./components/Project";
 import Footer from "./components/Footer";
 import star from "./assets/star.mp4";
 import About from "./components/About";
@@ -17,7 +17,7 @@ function App() {
       {<Current />}
       {/* <Home /> */}
       {/* <Conveyer /> */}
-      {/* <Projects /> */}
+      <Projects />
       {/* <Background /> */}
       <Footer />
     </div>
