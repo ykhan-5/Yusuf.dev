@@ -31,7 +31,7 @@ const Project = () => {
       <div className="Project-card">
         <img className="icon" src={plant} alt="3D Icon" />
         <div className="Project-card-title">
-          WM Customer Innovation and Data Intern
+          WM Buissness Optimization and Data Intern
         </div>
         <div className="Project-card-text">
           <ul>
