@@ -35,11 +35,20 @@
 }
 
 .icon {
-  height: 70px;
-  width: min-content;
+  height: auto; /* Allow the height to adjust automatically */
+  width: 20vw; /* Width relative to viewport width */
+  max-width: 70px; /* Limit maximum width */
   display: inline-block;
   vertical-align: middle;
   padding-bottom: 10px;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+  .icon {
+    width: 30vw; /* Adjust width for smaller screens */
+    max-width: 50px; /* Reduce max-width for smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
