@@ -12,16 +12,16 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="logo">YK</div>
       <div className={`links ${isOpen ? "open" : ""}`}>
-        <a href="#" className="nav-link">
+        <a href="#about" className="nav-link">
           About
         </a>
-        <a href="#" className="nav-link">
+        <a href="#current" className="nav-link">
           Current
         </a>
-        <a href="#" className="nav-link">
+        <a href="#projects" className="nav-link">
           Work+Skills
         </a>
-        <a href="#" className="nav-link">
+        <a href="#contact" className="nav-link">
           Contact
         </a>
       </div>

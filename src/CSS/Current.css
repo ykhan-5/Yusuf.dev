@@ -1,12 +1,16 @@
 .Current-container {
   /* background-color: #868788;
    */
-  background-color: #ececec;
+  /* padding-top: 80px; */
+
+  background-color: #f2f2f2;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 100px auto;
   gap: 1%;
   padding: 2%;
+  padding-top: 80px;
+  margin-top: -80px;
 }
 
 .Current-title {

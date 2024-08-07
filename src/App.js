@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import star from "./assets/star.mp4";
 import About from "./components/About";
 import Current from "./components/Current";
+import ContactForm from "./components/ContactForm";
 // import Background from "./components/Background";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       {/* <Conveyer /> */}
       <Projects />
       {/* <Background /> */}
+      <ContactForm />
       <Footer />
     </div>
   );

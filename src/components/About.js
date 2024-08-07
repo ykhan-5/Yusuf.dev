@@ -7,7 +7,7 @@ import math from "../assets/math.png";
 const About = () => {
   return (
     <div>
-      <div className="about-container">
+      <div className="about-container" id="about">
         <div className="about-text">
           Yusuf is a developer{" "}
           <img className="icon" src={computer} alt="3D Icon" />

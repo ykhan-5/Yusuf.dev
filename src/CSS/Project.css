@@ -7,6 +7,7 @@
   grid-template-rows: 100px auto;
   gap: 1%;
   padding: 2%;
+  padding-top: 80px;
 }
 
 .Project-title {

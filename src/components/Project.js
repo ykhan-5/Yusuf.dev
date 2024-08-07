@@ -7,7 +7,7 @@ import dsa from "../assets/DSA.png";
 
 const Project = () => {
   return (
-    <div className="Project-container">
+    <div className="Project-container" id="projects">
       <div className="Project-title">Past Work</div>
       <div className="Project-card">
         <img className="icon" src={box} alt="3D Icon" />

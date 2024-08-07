@@ -7,7 +7,7 @@ import dsa from "../assets/DSA.png";
 
 const Current = () => {
   return (
-    <div className="Current-container">
+    <div className="Current-container" id="current">
       <div className="Current-title">Currently..</div>
       <div className="Current-card">
         <img className="icon" src={curly} alt="3D Icon" />
