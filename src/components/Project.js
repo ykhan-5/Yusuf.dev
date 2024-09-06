@@ -28,28 +28,6 @@ const Project = () => {
           </ul>
         </div>
       </div>
-
-      <div className="Project-card">
-        <img className="icon" src={plant} alt="3D Icon" />
-        <div className="Project-card-title">
-          WM Buisness Optimization and Data Intern
-        </div>
-        <div className="Project-card-text">
-          <ul>
-            <li>
-              Validated bulk ordering eligibility for 1,500+ zones on WM.com
-            </li>
-            <li>
-              Utlized AWS Lex for intent/response control and Snowflake for data
-              analytics.
-            </li>
-            <li>
-              Created 50+ SQL scripts and comprehensive documentation for the
-              chatbot team
-            </li>
-          </ul>
-        </div>
-      </div>
       <div className="Project-card">
         <img className="icon" src={conoco} alt="3D Icon" />
         <div className="Project-card-title">
@@ -68,6 +46,27 @@ const Project = () => {
             <li>
               Integrated ConocoPhillips' REST API to retrieve and process large
               datasets, ensuring efficient model training.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="Project-card">
+        <img className="icon" src={plant} alt="3D Icon" />
+        <div className="Project-card-title">
+          WM Buisness Optimization and Data Intern
+        </div>
+        <div className="Project-card-text">
+          <ul>
+            <li>
+              Validated bulk ordering eligibility for 1,500+ zones on WM.com
+            </li>
+            <li>
+              Utlized AWS Lex for intent/response control and Snowflake for data
+              analytics.
+            </li>
+            <li>
+              Created 50+ SQL scripts and comprehensive documentation for the
+              chatbot team
             </li>
           </ul>
         </div>
