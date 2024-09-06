@@ -4,6 +4,7 @@ import box from "../assets/box.png";
 import codepath from "../assets/code.png";
 import plant from "../assets/plant.png";
 import dsa from "../assets/DSA.png";
+import conoco from "../assets/conoco.png";
 
 const Project = () => {
   return (
@@ -31,7 +32,7 @@ const Project = () => {
       <div className="Project-card">
         <img className="icon" src={plant} alt="3D Icon" />
         <div className="Project-card-title">
-          WM Buissness Optimization and Data Intern
+          WM Buisness Optimization and Data Intern
         </div>
         <div className="Project-card-text">
           <ul>
@@ -50,7 +51,7 @@ const Project = () => {
         </div>
       </div>
       <div className="Project-card">
-        <img className="icon" src={dsa} alt="3D Icon" />
+        <img className="icon" src={conoco} alt="3D Icon" />
         <div className="Project-card-title">
           Data Structures SEP Facilitator
         </div>

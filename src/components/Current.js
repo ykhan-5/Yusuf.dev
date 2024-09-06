@@ -24,10 +24,9 @@ const Current = () => {
         <img className="icon" src={ion} alt="3D Icon" />
         <div className="Current-card-title">Ion Student Ambassador</div>
         <div className="Current-card-text">
-          As a workshop facilitator for over 30 students, I provide interactive
-          sessions to reinforce Data Structures concepts. I offer tailored
-          support to address individual learning obstacles, contributing to a
-          10% increase in exam averages.
+          Serve as a representative of the University of Houston within the Ion
+          community, helping to bridge the gap between the academic institution
+          and the Ion’s resources.
         </div>
       </div>
       <div className="Current-card">
