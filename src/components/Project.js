@@ -53,17 +53,21 @@ const Project = () => {
       <div className="Project-card">
         <img className="icon" src={conoco} alt="3D Icon" />
         <div className="Project-card-title">
-          Data Structures SEP Facilitator
+          Conoco Phillips Innovation Challenge 2024
         </div>
         <div className="Project-card-text">
           <ul>
-            <li>Developed a postal Database using Azure-hosted MySQL</li>
             <li>
-              Collaborated with team members using Git for version control
+              Selected to tackle the challenge of optimizing drilling operations
+              by determining when to drill or repair oil wells.
             </li>
             <li>
-              Developed a full-stack application, leveraging React.js and
-              JavaScript.
+              Utilized a supervised binary classification approach with SVC and
+              Logistic Regression to predict equipment failures.
+            </li>
+            <li>
+              Integrated ConocoPhillips' REST API to retrieve and process large
+              datasets, ensuring efficient model training.
             </li>
           </ul>
         </div>
