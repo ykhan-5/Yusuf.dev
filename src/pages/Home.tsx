@@ -1,22 +1,59 @@
-import { Navbar } from "../components/Navbar";
+// src/pages/Home.tsx
 import { Hero } from "../components/Hero";
-import { AboutSection } from "../components/AboutSection";
 import { RecentProjects } from "../components/RecentProjects";
+
+const AVATAR = "https://unavatar.io/twitter/Ymkhan0";
+
+function TwitterCTA() {
+  return (
+    <div className="twitter-cta">
+      <div className="twitter-cta-left">
+        <a
+          href="https://x.com/Ymkhan0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="twitter-avatar"
+        >
+          <img src={AVATAR} alt="Yusuf Khan on Twitter" />
+        </a>
+        <div>
+          <div className="twitter-handle">@Ymkhan0</div>
+          <div className="twitter-bio">evolve until you die</div>
+        </div>
+      </div>
+
+      <a
+        href="https://x.com/Ymkhan0"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="twitter-follow-btn"
+      >
+        Follow on X →
+      </a>
+    </div>
+  );
+}
+
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <span className="footer-brand">Yusuf Khan</span>
+      <div className="footer-links">
+        <a href="https://github.com/ykhan-5" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://x.com/Ymkhan0" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://linkedin.com/in/yusuf-khan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+  );
+}
 
 export function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
-      <AboutSection />
       <RecentProjects />
-
-      <section id="contact" className="container" style={{ paddingTop: 24, paddingBottom: 96 }}>
-        <div style={{ borderTop: "1px solid #e5e7eb", paddingTop: 24 }}>
-          <h3 style={{ margin: 0, fontSize: 18 }}>Contact (placeholder)</h3>
-          <p className="subtle">Later: email, socials, resume link.</p>
-        </div>
-      </section>
+      <TwitterCTA />
+      <SiteFooter />
     </>
   );
 }
