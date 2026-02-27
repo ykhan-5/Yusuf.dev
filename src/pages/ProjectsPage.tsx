@@ -1,82 +1,77 @@
-import { useMemo, useState } from "react";
+// src/pages/ProjectsPage.tsx
 import { Link } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
-import { projects, type ProjectCategory } from "../data/projects";
+import { projects } from "../data/projects";
 
-function CategoryIcon({ active, onClick, label, children }: any) {
-  return (
-    <button className={`iconFilter ${active ? "iconFilterActive" : ""}`} onClick={onClick} title={label}>
-      {children}
-    </button>
-  );
-}
+const THUMB_COLORS: Record<string, string> = {
+  "pinterest-ebay-matcher": "#FF4141",
+  "wisdomai-demo":          "#0a0a0a",
+  "redesign-practice":      "#D4C9A8",
+};
+
+const THUMB_TEXT_COLORS: Record<string, string> = {
+  "pinterest-ebay-matcher": "#fff",
+  "wisdomai-demo":          "#fff",
+  "redesign-practice":      "#0a0a0a",
+};
 
 export function ProjectsPage() {
-  const [cat, setCat] = useState<ProjectCategory | "all">("all");
-
-  const sorted = useMemo(() => {
-    const list = [...projects].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-    );
-    if (cat === "all") return list;
-    return list.filter((p) => p.category === cat);
-  }, [cat]);
+  const sorted = [...projects].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 
   return (
     <>
       <Navbar />
-      <main className="container" style={{ paddingTop: 32, paddingBottom: 96 }}>
-        <div className="pageHeaderRow">
-          <div>
-            <h1 className="pageTitle">Projects</h1>
-            <p className="subtle">Filter by type, then click a card for the case study page.</p>
+      <section style={{ background: "#fff" }}>
+        <div className="projects-wrap">
+          <div className="projects-header">
+            <span className="projects-heading">All Projects</span>
+            <span className="projects-count">{projects.length} total</span>
           </div>
 
-         <div className="iconRow">
-  <button
-    className={`filterPill ${cat === "all" ? "filterPillActive" : ""}`}
-    onClick={() => setCat("all")}
-    title="Show all"
-  >
-    All
-  </button>
+          <div className="projects-grid">
+            {sorted.map((p) => {
+              const externalLink = p.highlights.links?.find(l => l.href !== "#")?.href;
+              const href = externalLink ?? `/projects/${p.id}`;
+              const isExternal = !!externalLink;
+              const bg   = THUMB_COLORS[p.id]      ?? "#e5e5e5";
+              const text = THUMB_TEXT_COLORS[p.id] ?? "#0a0a0a";
 
-  <CategoryIcon
-    active={cat === "build"}
-    onClick={() => setCat((c) => (c === "build" ? "all" : "build"))}
-    label="Build"
-  >
-    {/* icon */}
-  </CategoryIcon>
+              const Inner = (
+                <>
+                  <div className="project-thumb" style={{ background: bg, color: text }} />
+                  <div className="project-info">
+                    <p style={{ margin: 0, lineHeight: 1.45 }}>
+                      <span className="project-title-name">{p.title}: </span>
+                      <span className="project-title-desc">{p.description}</span>
+                    </p>
+                    <span className={`project-status-pill ${p.status}`}>
+                      {p.status === "wip" ? "In progress" : p.status}
+                    </span>
+                  </div>
+                </>
+              );
 
-  <CategoryIcon
-    active={cat === "design"}
-    onClick={() => setCat((c) => (c === "design" ? "all" : "design"))}
-    label="Design"
-  >
-    {/* icon */}
-  </CategoryIcon>
-</div>
-
+              return isExternal ? (
+                <a
+                  key={p.id}
+                  className="project-item"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {Inner}
+                </a>
+              ) : (
+                <Link key={p.id} className="project-item" to={href}>
+                  {Inner}
+                </Link>
+              );
+            })}
+          </div>
         </div>
-
-        <div className="grid3">
-          {sorted.map((p) => (
-            <Link to={`/projects/${p.id}`} className="card" key={p.id}>
-              <div className="cardMedia">Project placeholder</div>
-              <div className="cardBody">
-                <div className="cardTitle">{p.title}</div>
-                <div className="cardMeta">{p.description}</div>
-
-                <div className="badgeRow" style={{ marginTop: 12 }}>
-                  <span className={`badge badge-${p.category}`}>{p.category}</span>
-                  <span className={`badge badge-${p.status}`}>{p.status}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </main>
+      </section>
     </>
   );
 }

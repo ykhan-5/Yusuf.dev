@@ -1,7 +1,4 @@
 // src/components/Hero.tsx
-// Avatar via unavatar.io — pulls your Twitter/X profile pic automatically
-
-const AVATAR = "https://unavatar.io/twitter/Ymkhan0";
 
 export function Hero() {
   return (
@@ -16,31 +13,12 @@ export function Hero() {
         </div>
       </nav>
 
-      {/* ── Body: photo | name | links ───────── */}
+      {/* ── Body: name | social links ────────── */}
       <div className="hero-body">
-
-        {/* Left: stacked photo frames (clicking goes to Twitter) */}
-        <div className="hero-photo-col">
-          <a
-            href="https://x.com/Ymkhan0"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-photo-frame"
-            title="@Ymkhan0 on X"
-          >
-            <img src={AVATAR} alt="Yusuf Khan" />
-          </a>
-          <div className="hero-photo-frame-2">
-            <img src={AVATAR} alt="" aria-hidden="true" />
-          </div>
-        </div>
-
-        {/* Center: the big name */}
         <h1 className="hero-name">
           Yusuf<br />Khan
         </h1>
 
-        {/* Right: vertical social links */}
         <div className="hero-links-col">
           <a
             className="hero-social-item"
