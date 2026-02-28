@@ -21,20 +21,17 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── HERO ───────────────────────────────────────── */
 .hero {
-  background: var(--yellow);
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  position: relative;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
 }
 
+/* ── Nav ── */
 .hero-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 44px;
-  flex-shrink: 0;
+  padding: 24px 44px;
+  gap: 24px;
 }
 
 .hero-brand {
@@ -43,112 +40,93 @@ a { color: inherit; text-decoration: none; }
   font-size: 15px;
   letter-spacing: -0.01em;
   color: var(--black);
+  flex-shrink: 0;
 }
 
 .hero-nav-links {
   display: flex;
-  gap: 36px;
+  gap: 32px;
   align-items: center;
 }
 
 .hero-nav-links a {
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 500;
   color: var(--black);
-  opacity: 0.75;
+  opacity: 0.6;
   transition: opacity 0.15s;
 }
 
 .hero-nav-links a:hover { opacity: 1; }
 
-/* ─── HERO BODY: 2-col grid ──────────────────────── */
-.hero-body {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  gap: 0;
-  padding: 0 44px 0 44px;
+.hero-contact-btn {
+  display: inline-flex;
   align-items: center;
-  min-height: 0;
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--black);
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: border-color 0.15s;
 }
 
-/* ─── THE BIG NAME ───────────────────────────────── */
+.hero-contact-btn:hover { border-color: var(--black); }
+
+/* ── Main area ── */
+.hero-main {
+  position: relative;
+  padding: 24px 44px 56px;
+  min-height: 68vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+/* Float image top-right */
+.hero-float-img {
+  position: absolute;
+  top: 0;
+  right: 44px;
+  width: clamp(160px, 20vw, 260px);
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--off);
+}
+
+.hero-float-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Big name anchored bottom-left */
 .hero-name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(64px, 14vw, 200px);
-  line-height: 0.9;
-  letter-spacing: -0.035em;
+  font-size: clamp(72px, 13.5vw, 210px);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
   color: var(--black);
-  text-transform: uppercase;
   margin: 0;
-  user-select: none;
+  position: relative;
+  z-index: 1;
 }
 
-/* ─── RIGHT SOCIAL LINKS ─────────────────────────── */
-.hero-links-col {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-self: flex-end;
-  padding-bottom: 48px;
-}
-
-.hero-social-item {
-  cursor: pointer;
-  text-decoration: none;
-  display: block;
-}
-
-.hero-social-item:hover .hl-label { opacity: 1; }
-
-.hl-label {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: var(--black);
-  opacity: 0.85;
-  transition: opacity 0.15s;
-  text-transform: uppercase;
-}
-
-.hl-sub {
-  display: block;
-  font-size: 11px;
-  color: var(--black);
-  opacity: 0.5;
-  margin-top: 3px;
-}
-
-/* ─── HERO FOOTER ────────────────────────────────── */
-.hero-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 20px 44px 28px;
-  flex-shrink: 0;
-}
-
-.hero-tagline {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--black);
-  opacity: 0.6;
-  max-width: 480px;
+/* Tagline bottom-right */
+.hero-sub {
+  position: absolute;
+  right: 44px;
+  bottom: 56px;
+  text-align: right;
+  font-size: 14px;
   line-height: 1.7;
-}
-
-.hero-year {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: var(--black);
-  opacity: 0.4;
+  color: var(--muted);
+  max-width: 200px;
 }
 
 /* ─── TWEET FEED ─────────────────────────────────── */
@@ -414,149 +392,265 @@ a { color: inherit; text-decoration: none; }
 .project-status-pill.live { background: #ecfdf5; color: #059669; }
 .project-status-pill.wip  { background: #fefce8; color: #854d0e; }
 
-/* ─── TWITTER CTA ────────────────────────────────── */
-.twitter-cta {
-  background: var(--black);
-  padding: 56px 44px;
+/* ─── EXPERIENCE ─────────────────────────────────── */
+.exp-section {
+  background: var(--off);
+}
+
+.exp-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 44px 100px;
+}
+
+.exp-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 56px;
+  align-items: start;
+}
+
+.exp-head-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exp-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+
+.exp-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin: 0;
+}
+
+.exp-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+  padding-top: 8px;
+  max-width: 38ch;
+}
+
+/* Experience rows */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  transition: background 0.15s;
+  border-radius: 4px;
 }
 
-.twitter-cta-left {
+.exp-row:last-child { border-bottom: 1px solid var(--border); }
+
+.exp-row:hover { background: rgba(0,0,0,0.025); padding-left: 12px; padding-right: 12px; }
+
+.exp-row-left {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
 }
 
-.twitter-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 2px solid rgba(255,255,255,0.12);
-  background: #1a1a1a;
-}
-
-.twitter-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.twitter-handle {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 20px;
-  color: var(--white);
-  letter-spacing: -0.02em;
-}
-
-.twitter-bio {
-  font-size: 13px;
-  color: rgba(255,255,255,0.4);
-  margin-top: 5px;
-  letter-spacing: 0.01em;
-}
-
-.twitter-follow-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--yellow);
+.exp-role-title {
+  font-size: 18px;
+  font-weight: 700;
   color: var(--black);
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  border-radius: 2px;
-  text-decoration: none;
-  flex-shrink: 0;
-  transition: opacity 0.15s;
+  letter-spacing: -0.01em;
 }
 
-.twitter-follow-btn:hover { opacity: 0.85; }
+.exp-role-summary {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.exp-period {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 56px);
+  letter-spacing: -0.03em;
+  color: var(--black);
+  white-space: nowrap;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
 
 /* ─── FOOTER ─────────────────────────────────────── */
-.site-footer {
-  background: var(--off);
-  padding: 24px 44px;
+.footer {
+  background: var(--black);
+  color: var(--white);
+}
+
+.footer-top {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  padding: 64px 44px 48px;
+  gap: 32px;
+}
+
+.footer-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(52px, 8vw, 110px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  margin: 0;
+}
+
+.footer-cta-btn {
+  display: inline-flex;
   align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-top: 8px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.footer-cta-btn:hover {
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.footer-cta-icon {
+  font-size: 16px;
+  letter-spacing: -0.05em;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0 44px;
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  padding: 40px 44px 40px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .footer-brand {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 13px;
+  font-size: 15px;
+  color: var(--white);
   letter-spacing: -0.01em;
-  color: var(--black);
 }
 
-.footer-links {
+.footer-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-socials {
   display: flex;
-  gap: 28px;
+  gap: 16px;
+  margin-top: 8px;
 }
 
-.footer-links a {
-  font-size: 12px;
-  color: var(--muted);
-  font-weight: 600;
-  letter-spacing: 0.03em;
+.footer-socials a {
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
   transition: color 0.15s;
 }
 
-.footer-links a:hover { color: var(--black); }
+.footer-socials a:hover { color: var(--white); }
+
+.footer-nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 4px;
+}
+
+.footer-nav-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.15s;
+}
+
+.footer-nav-col a:hover { color: var(--white); }
+
+.footer-copy {
+  padding: 16px 44px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
 
 /* ─── RESPONSIVE ─────────────────────────────────── */
 @media (max-width: 900px) {
-  .hero-nav { padding: 20px 24px; }
+  .hero-nav { padding: 18px 24px; }
+  .hero-main { padding: 16px 24px 48px; min-height: 55vh; }
+  .hero-float-img { width: clamp(120px, 28vw, 180px); right: 24px; }
+  .hero-sub { right: 24px; bottom: 48px; font-size: 13px; max-width: 160px; }
 
-  .hero-body {
-    grid-template-columns: 1fr;
-    padding: 16px 24px 0;
-    align-items: flex-start;
-    gap: 20px;
-  }
+  .feed-wrap, .projects-wrap { padding: 48px 20px 64px; }
 
-  .hero-name {
-    font-size: clamp(64px, 18vw, 140px);
-  }
+  .exp-wrap { padding: 56px 24px 72px; }
+  .exp-head { grid-template-columns: 1fr; gap: 20px; }
+  .exp-period { font-size: clamp(22px, 6vw, 40px); }
 
-  .hero-links-col {
-    align-self: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px 32px;
-    padding-bottom: 0;
-  }
-
-  .hero-footer {
-    padding: 16px 24px 24px;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-  }
-
-  .projects-wrap { padding: 48px 24px 64px; }
-  .projects-grid { grid-template-columns: 1fr; column-gap: 0; }
-  .project-thumb { width: 120px; height: 90px; }
-
-  .twitter-cta {
-    padding: 40px 24px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-footer {
-    padding: 20px 24px;
-    flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
-  }
+  .footer-top { padding: 48px 24px 36px; flex-direction: column; gap: 24px; }
+  .footer-divider { margin: 0 24px; }
+  .footer-bottom { grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; }
+  .footer-copy { padding: 16px 24px; }
 }
