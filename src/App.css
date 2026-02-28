@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+/* src/styles.css */
+:root {
+  --bg: #ffffff;
+  --text: #0b0b0b;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --pill: 999px;
+
+  --btn: #0b0b0b;
+  --btnText: #ffffff;
+  --btnHover: #111111;
+
+  --btn2Bg: #ffffff;
+  --btn2Text: #0b0b0b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.brandUnderline {
+  display: inline-block;
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 2px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.navLinks a {
+  color: #111827;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.navLinks a:hover { opacity: 1; }
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--pill);
+  border: 1px solid var(--border);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--pill);
+  border: 2px solid #d1d5db;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.avatarInner {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, #60a5fa 0%, #a78bfa 45%, #34d399 100%);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  padding: 56px 0 24px;
+}
+
+.h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 22px;
+  font-weight: 600;
+}
+
+.subtle {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 16px 0 30px;
+}
+
+.btnPrimary {
+  border: 0;
+  background: var(--btn);
+  color: var(--btnText);
+  padding: 14px 22px;
+  border-radius: var(--pill);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnPrimary:hover { background: var(--btnHover); }
+
+.btnSecondary {
+  border: 1px solid var(--border);
+  background: var(--btn2Bg);
+  color: var(--btn2Text);
+  padding: 14px 22px;
+  border-radius: var(--pill);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnSecondary:hover { background: #f9fafb; }
+
+.learnMoreRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #111827;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.circleDown {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--pill);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+}
+
+.visualCard {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: radial-gradient(circle at 30% 20%, #e0f2fe 0%, transparent 40%),
+              radial-gradient(circle at 80% 30%, #ede9fe 0%, transparent 45%),
+              radial-gradient(circle at 60% 80%, #dcfce7 0%, transparent 50%),
+              #fff;
+  overflow: hidden;
+}
+
+.visualPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.placeholderBox {
+  width: min(380px, 80%);
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  border: 1px dashed #cbd5e1;
+  background: linear-gradient(135deg, #f8fafc, #ffffff);
+  display: grid;
+  place-items: center;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Floating “chips” like the screenshot vibe */
+.floater {
+  position: absolute;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #111827;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.f1 { top: 26px; right: 26px; }
+.f2 { top: 110px; left: 24px; }
+.f3 { bottom: 28px; right: 30px; }
+
+@media (max-width: 900px) {
+  .navLinks { display: none; }
+  .hero { grid-template-columns: 1fr; padding-top: 32px; }
+  .visualCard { min-height: 360px; }
 }
