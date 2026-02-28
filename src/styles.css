@@ -129,193 +129,20 @@ a { color: inherit; text-decoration: none; }
   max-width: 200px;
 }
 
-/* ─── TWEET FEED ─────────────────────────────────── */
-.feed-wrap {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 64px 24px 88px;
-}
-
-.feed-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding-bottom: 14px;
-  border-bottom: 2px solid var(--black);
-  margin-bottom: 0;
-}
-
-.feed-heading {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--black);
-}
-
-.feed-count {
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
-.feed-list {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ─── SINGLE TWEET CARD ──────────────────────────── */
-.tweet-card {
-  display: flex;
-  gap: 12px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.tweet-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: #1a1a1a;
-  display: block;
-}
-
-.tweet-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tweet-body {
-  flex: 1;
-  min-width: 0;
-}
-
-.tweet-header {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
-}
-
-.tweet-name {
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--black);
-}
-
-.tweet-handle {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.tweet-dot {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.tweet-date {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.tweet-text {
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--black);
-  margin-bottom: 12px;
-}
-
-/* ─── TWEET IMAGE ────────────────────────────────── */
-.tweet-img-wrap {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  height: 220px;
-  margin-bottom: 12px;
-}
-
-.tweet-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tweet-img-placeholder {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 16px;
-}
-
-.tweet-img-label {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  position: relative;
-  z-index: 1;
-  opacity: 0.7;
-}
-
-/* ─── TWEET ACTIONS ROW ──────────────────────────── */
-.tweet-actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.tweet-status-tag {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 4px 8px;
-  border-radius: 2px;
-  background: var(--off);
-  color: var(--muted);
-}
-
-.tweet-status-tag.live {
-  background: #ecfdf5;
-  color: #059669;
-}
-
-.tweet-status-tag.wip {
-  background: #fefce8;
-  color: #854d0e;
-}
-
-.tweet-view-link {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-.tweet-view-link:hover { color: var(--black); }
-
-/* ─── PROJECTS PAGE (sub-page, same feed style) ─── */
+/* ─── PROJECTS GRID (Riley Walz style) ───────────── */
 .projects-wrap {
-  max-width: 640px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 64px 24px 88px;
+  padding: 72px 44px 96px;
 }
 
 .projects-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
   border-bottom: 2px solid var(--black);
-  margin-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .projects-heading {
@@ -334,63 +161,50 @@ a { color: inherit; text-decoration: none; }
 }
 
 .projects-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 48px;
+  row-gap: 40px;
 }
 
 .project-item {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   align-items: flex-start;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: inherit;
   transition: opacity 0.15s;
 }
 
-.project-item:hover { opacity: 0.65; }
+.project-item:hover { opacity: 0.6; }
 
 .project-thumb {
-  width: 148px;
-  height: 112px;
+  width: 200px;
+  height: 152px;
   flex-shrink: 0;
-  border-radius: 3px;
-  overflow: hidden;
+  border-radius: 8px;
 }
 
-.project-info { flex: 1; padding-top: 4px; }
+.project-info {
+  flex: 1;
+  padding-top: 6px;
+}
+
+.project-label {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
 
 .project-title-name {
-  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.3;
   color: var(--black);
 }
 
 .project-title-desc {
-  font-size: 15px;
   color: var(--muted);
   font-weight: 400;
-  line-height: 1.5;
 }
-
-.project-status-pill {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 2px;
-  background: var(--off);
-  color: var(--muted);
-}
-
-.project-status-pill.live { background: #ecfdf5; color: #059669; }
-.project-status-pill.wip  { background: #fefce8; color: #854d0e; }
 
 /* ─── EXPERIENCE ─────────────────────────────────── */
 .exp-section {
@@ -407,7 +221,7 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
   align-items: start;
 }
 
@@ -496,7 +310,7 @@ a { color: inherit; text-decoration: none; }
 .exp-period {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 56px);
+  font-size: clamp(22px, 3vw, 48px);
   letter-spacing: -0.03em;
   color: var(--black);
   white-space: nowrap;
@@ -638,19 +452,83 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── RESPONSIVE ─────────────────────────────────── */
 @media (max-width: 900px) {
-  .hero-nav { padding: 18px 24px; }
-  .hero-main { padding: 16px 24px 48px; min-height: 55vh; }
-  .hero-float-img { width: clamp(120px, 28vw, 180px); right: 24px; }
-  .hero-sub { right: 24px; bottom: 48px; font-size: 13px; max-width: 160px; }
 
-  .feed-wrap, .projects-wrap { padding: 48px 20px 64px; }
+  /* ── Nav ── */
+  .hero-nav {
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  /* Hide middle links on mobile — keep brand + CTA only */
+  .hero-nav-links { display: none; }
 
-  .exp-wrap { padding: 56px 24px 72px; }
-  .exp-head { grid-template-columns: 1fr; gap: 20px; }
-  .exp-period { font-size: clamp(22px, 6vw, 40px); }
+  /* ── Hero main: switch from absolute to stacked flow ── */
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 20px 40px;
+    min-height: unset;
+    overflow: visible;
+  }
 
-  .footer-top { padding: 48px 24px 36px; flex-direction: column; gap: 24px; }
-  .footer-divider { margin: 0 24px; }
-  .footer-bottom { grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; }
-  .footer-copy { padding: 16px 24px; }
+  /* Image: normal flow, smaller, not absolute */
+  .hero-float-img {
+    position: static;
+    width: 100px;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px;
+    align-self: flex-end;
+    margin-bottom: -8px;
+  }
+
+  .hero-name {
+    font-size: clamp(56px, 16vw, 100px);
+  }
+
+  /* Sub text: normal flow below name, left-aligned */
+  .hero-sub {
+    position: static;
+    text-align: left;
+    font-size: 14px;
+    max-width: 100%;
+    margin-top: 4px;
+  }
+
+  /* ── Projects ── */
+  .projects-wrap { padding: 40px 20px 60px; }
+  .projects-header { margin-bottom: 28px; }
+  .projects-grid { grid-template-columns: 1fr; row-gap: 28px; }
+  .project-thumb { width: 120px; height: 90px; border-radius: 6px; }
+  .project-label { font-size: 15px; }
+
+  /* ── Experience ── */
+  .exp-wrap { padding: 48px 20px 60px; }
+  .exp-head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 28px; }
+  .exp-title { font-size: clamp(24px, 6vw, 36px); }
+  .exp-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 20px 0;
+  }
+  .exp-row:hover { padding-left: 0; padding-right: 0; }
+  .exp-period { font-size: clamp(28px, 8vw, 48px); opacity: 0.7; }
+
+  /* ── Footer ── */
+  .footer-top {
+    padding: 40px 20px 32px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-headline { font-size: clamp(40px, 12vw, 80px); }
+  .footer-divider { margin: 0 20px; }
+  .footer-bottom { grid-template-columns: 1fr; padding: 28px 20px; gap: 24px; }
+  .footer-copy { padding: 14px 20px; }
+}
+
+/* ── Very small phones ── */
+@media (max-width: 480px) {
+  .hero-contact-btn { display: none; }
+  .project-thumb { width: 100px; height: 76px; }
 }
